@@ -11,11 +11,9 @@ section {
 }
 
 .welcome {
-    opacity: 0;
     height: auto;
     padding-top: calc(45vh - 70px);
-    padding-bottom: calc(50vh);
-    animation: 3s fadeIn forwards;
+    transition: all 1s;
 }
 
 .welcome-title {
@@ -23,26 +21,52 @@ section {
     font-weight: 300;
 }
 
+.welcome-transition {
+    transition: all 1s;
+}
+
+.welcome-transition.scrolled {
+    opacity: 0;
+    transform: translateY(-50vh);
+}
+
+.sec-transition {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.sec-transition.focus {
+    opacity: 1;
+    transform: translateY(-50vh);
+    transition-delay: 0.5s;
+}
+
 .project-1 {
     opacity: 0;
-    animation: 1s fadeIn forwards;
+    transition: all 1s;
 }
 
 .project-2 {
     opacity: 0;
-    animation: 1.5s ease-in fadeIn forwards;
+    transition: all 1s;
 }
 
 .project-3 {
     opacity: 0;
-    animation: 2s ease-in fadeIn forwards;
+    transition: all 1s;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.project-1.focus {
+    opacity: 1;
+    transition-delay: 1s;
+}
+
+.project-2.focus {
+    opacity: 1;
+    transition-delay: 1.5s;
+}
+
+.project-3.focus {
+    opacity: 1;
+    transition-delay: 2s;
 }
