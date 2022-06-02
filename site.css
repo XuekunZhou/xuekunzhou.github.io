@@ -9,3 +9,40 @@ p {
 section {
     padding-top: 70px;
 }
+
+.welcome {
+    opacity: 0;
+    height: auto;
+    padding-top: calc(45vh - 70px);
+    padding-bottom: calc(50vh);
+    animation: 3s fadeIn forwards;
+}
+
+.welcome-title {
+    font-size: calc(40px + 8vh);
+    font-weight: 300;
+}
+
+.project-1 {
+    opacity: 0;
+    animation: 1s fadeIn forwards;
+}
+
+.project-2 {
+    opacity: 0;
+    animation: 1.5s ease-in fadeIn forwards;
+}
+
+.project-3 {
+    opacity: 0;
+    animation: 2s ease-in fadeIn forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
